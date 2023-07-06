@@ -1,0 +1,447 @@
+/* Declaración de Animación de colores */
+@keyframes anim{
+  0% {background-color:yellow} 
+ 25% {background-color: red;} 
+ 50% {background-color:#2196F3}
+ 25% {background-color: #000;} 
+ 50% {background-color: red;} 
+ 25% {background-color:#2196F3}
+100% {background-color:yellow;}
+}
+
+/*Oculta la class que se indique*/
+.ocultar{
+  display:none;
+}
+
+body{
+    text-align:center;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    background:    /*fondo de gradientes con los 3 colores de la triada elegidos, con ángulos distintos para combinarlos*/
+      linear-gradient(217deg,rgba(255, 0, 0, 0.8),rgba(35, 10, 225, 0) 70.71%), 
+      linear-gradient(127deg, rgba(221, 215, 26, 0.8), rgba(0, 255, 0, 0) 70.71%),
+      linear-gradient(236deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+
+}
+
+
+/**--- MENÚ SUPERIOR ---*/
+.logo{
+  width:6.8vw;
+  margin:0;
+  padding: 0;
+  position: relative;
+  top: -0.7vw;
+}
+
+nav {
+  text-align: right;
+  margin:0;
+  padding: 0;
+  height: 2vw;
+  font-size: calc(0.7em + 0.7vw);
+}
+
+nav ul {
+  list-style: none;   /*Le quito estilos a las viñetas*/
+  overflow: hidden; 
+  text-align: center;
+  margin-bottom:0;
+  padding-bottom:0;
+}
+
+nav li {
+  float: left;
+  padding: 0% 4vw;   
+  text-align: center;
+}
+
+nav a {
+  display: block; 
+  margin-left: 2vW;
+  color:black;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav img{
+  float: left;
+  padding: 1% 1%;
+  width: 8%;
+}
+
+nav a:hover {
+  background:#2196F3;
+}
+/* Fin menú superior */
+
+/*-- Primera línea del juego, con el nombre --*/
+h1{
+    margin-top: 0;
+    margin-bottom: 1%;
+    font-size: calc(2.5em + 1vw);
+    background-color:black;
+    color:#2196F3;
+
+}
+
+button{
+    margin: 0;
+    padding: 0;
+}
+
+/*----- Imágenes de las colecciones de la primera pantalla ----- */
+.colecciones{
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    background-color: blue;
+    margin: 0 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+colecciones.button{
+    background-color: blue;
+    
+}
+
+/* Cada una de las colecciones */
+.coleccion1, .coleccion2, .coleccion3{
+    border: 4px solid blue;
+    background-color: blue;
+}
+
+
+.coleccion1:hover, .coleccion2:hover, .coleccion3:hover{
+    border: 4px solid rgb(193, 226, 133);
+
+}
+
+/* Cambia el borde de la colección al clicar encima de la colección */
+.seleccionado{
+    border: 5px solid red;
+}
+
+/* Línea por encima y por debajo de la imagen de las colecciones */
+.cabezaFoto{
+  border-top: 5px solid black;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  margin: 0 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color:aqua;
+  font-size: calc(1em + 1vw);
+}
+
+.pieFoto{
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    margin: 0 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color:aqua;
+    font-size: calc(1em + 1vw);
+}
+/*----- FIN DE Imágenes de las colecciones ----- */
+
+
+/*----- Formulario de Colección elegida e intentos elegidos.  ------*/
+.elecciones{
+  border: 5px solid black;
+  background-color: aqua;
+  margin: 0 20%;
+  padding: 1% 2%;
+  width: 45vw;
+  font-size: calc(1em + 1vw);
+  text-align: left;
+}
+
+.elecciones button{
+    font-size: calc(0.4em + 1vw);
+    padding:1%;
+}
+
+.elecciones input{
+    font-size: calc(0.4em + 1vw);
+    padding:1%;
+}
+/*----- FIN DE Apartado de Colección elegida y intentos elegidos ------*/
+
+
+/*----- LATERAL IZQUIERDO ----- */
+.lateral{
+    float: left;
+    width: 20.2vw;
+    background-color: blue;
+}
+
+.lateral p{
+    background-color: aqua;
+    margin: 2.3% 0 2% 2%;
+    padding: 0.2% 1%;
+    width: 19vw;
+    font-size: calc(0.8em + 1vw);
+    /* text-align: left; */
+}
+
+
+.lateral form{
+    background-color: rgb(3, 3, 85);
+    box-sizing: border-box;
+    color: cyan;
+    border: 4px solid red;
+    padding-bottom:  10%;
+    padding-left: 2%;
+    margin: 2.3% 3% 2% 3%;
+    width: 19vw;
+    font-size: calc(0.8em + 1vw);
+    text-align: left;
+}
+
+/* Letras explicación de X e y */
+.observaciones{
+    font-size: calc(0.4em + 0.5vw);
+}
+
+/*Coordenada ya elegida*/
+.elegido{
+    color: red;
+    font-size: calc(0.4em + 0.5vw);
+  }
+
+  /*botón de Enviar*/
+.enviarCoord{
+    border: 2px solid red;
+    background-color: cyan;
+    color:rgb(3, 3, 85);
+}
+
+.enviarCoord:hover{
+    background-color:red;
+    border: 2px solid cyan;
+    color:rgb(3, 3, 85);
+}
+
+/* Imágenes ya encontradas, en el lateral */
+.imagenes img{
+    width: 6.4vw;
+    height: 6.3vw;
+    align-items: center;
+    padding: 1.5% 0% 0 4%;
+}
+
+
+/* Cuando se ha terminado la partida */
+.lateral .fin {
+  color: red;
+  font-weight: bold;
+  font-size: calc(0.5em + 0.8vw);
+  text-align: center;
+  background-color: cyan;
+  padding: 0;
+  margin: 0;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+/*Apartado de continuar jugando*/
+.continuar{
+  font-size: calc(0.9em + 1vw);
+  background-color: yellow;
+  padding-bottom: 10%;
+  padding-top: 10%;
+}
+
+.final button{
+  font-size: calc(0.8em + 0.7vw);
+}
+
+.continuar button:hover{
+color:red;
+background-color: aqua;
+}
+/**----- FIN DE LATERAL IZQUIERDO ----- **/
+
+
+/**----- TABLERO -----**/
+
+/*fondo del tablero*/
+.grid-container {
+    display: grid;
+    grid-template-columns: 2vw 6.7vw 6.7vw 6.7vw 6.7vw 6.7vw 6.7vw 6.7vw 6.7vw 6.7vw 6.7vw 6.7vw;
+    background-color: #2196F3;
+    padding: 10px;
+    /* padding-right: 2%; */
+    /* width: 71vw; */
+  }
+
+  /* cabecera de fila - Primera columna */
+ .fil-item {
+    font-size: calc(0.8em + 1vw);
+    height: 0.9vw;
+    padding-top: 1vw;
+    padding-right: 1vw;
+ }
+
+ /* Cabecera de columnas - primera fila */
+ .cab-item{
+    font-size: calc(0.8em + 1vw);
+    height: 0.8vw;
+    padding-top: 0;
+    padding-bottom: 2vw;
+ }
+
+ /*cada una de las posiciones interiores*/
+  .grid-item {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 0.5vw;
+    font-size: calc(0.5em + 0.4vw);
+    text-align: center;
+    height: 3.6vw;  
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    font-weight: bolder;
+
+    /* background-image:url(Assets/iconos/jirafa.png);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:center; */
+
+  }
+/* imagen que sale en el grid */
+  .imgGrid{
+    width: 3vw;
+    height: 3vw;
+    align-items: center;
+}
+
+  .grid-item:hover{
+    /* background: rgba(255, 255, 255, 0.5); */
+    background: radial-gradient(#2196f3, blue);
+   
+
+  }
+
+  /*Posibilidades al descubrir una posición*/
+  .agua{
+    background-color: rgb(226, 166, 166);
+    height: 3.6vw; 
+    
+  }
+
+  .tocado{
+    background-color: rgb(62, 216, 62);
+    font-size: calc(0.5em + 0.4vw);
+    color: darkblue;
+    font-weight:bolder;
+    height: 3.6vw; 
+    
+  }
+
+  .finalizado{
+    background-color: green;
+    color: yellow;
+    font-size: calc(0.5em + 0.4vw);
+    height: 3.6vw; 
+  }
+
+  .sinEncontrar{
+    background-color: rgb(255, 72, 0);
+  }
+/**---Fin del TABLERO ---**/
+
+
+/***---- POP-UPS ---**/
+
+/*--- Pantalla pop-up al terminar la partida ---*/
+.finPartida{
+  display: none;  /*oculto por defecto*/
+  position: fixed;  /*Se queda en el mismo lugar*/
+  z-index: 1; /*se queda arriba*/ 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;  /*capacita scroll si es necesario*/
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.popup{
+  background-color:antiquewhite;
+  margin: 7% 25%;
+  padding: 3%;
+  border: 5px solid #dc1515;
+  width: 50%;
+  height:25%;
+  font-size: calc(0.9em + 1vw);
+}
+
+.imgResultado{
+  width: 40%;
+}
+/*-- Fin Pop-up al termina partida --*/
+
+/*Botón de Cerrar*/
+.close{
+  color:#000000;
+  background-color:gray;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover{
+  color:rgb(61, 7, 237);
+  background-color:rgb(23, 26, 26);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*pop-up al encontrar una figura completa*/
+.imagenEncontrada{
+  display: none;  /*oculto por defecto*/
+  position: fixed;  /*Se queda en el mismo lugar*/
+  z-index: 1; /*se queda arriba*/ 
+  top: 20%;
+  left: 40%;
+  width: 28vw;
+  height: 28vw;
+  overflow: auto;  /*capacita scroll si es necesario*/
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+/**--- FIN POP-UPS---**/
+
+/** Última pantalla del juego, dar las gracias, despedida*/
+.gracias{
+  background-color:#2196F3;
+  border: 5px solid red;
+  text-align: center;  
+  height: 50%;
+  width: 80%;
+  line-height: 2;
+  text-align: center;
+  margin-left: 10%;
+  animation: anim 5s ease-in-out infinite alternate both;
+  
+}
+
+.gracias img{
+  width: 20vw;
+}
+
+
+
+
+  

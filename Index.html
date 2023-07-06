@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <title>Encuentra-los Inicio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Framework - librería Animation.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+</head>
+
+
+<body>
+    
+    <nav>
+        <ul>
+            <li><img class="logo" src="Assets/iconos/logo1.png" alt="logo"></li>
+            <li><a href="Index.html">Comenzar</a></li>
+            <li><a href="./Objetivo-del-juego.pdf" target="_blank">Objetivo del juego</a></li>
+            <li><a href="./Manual-de-usuario.pdf" target="_blank">Reglas del juego</a></li>
+            <li><a href="http://marijgonzalez.es" target="_blank">Quiénes somos</a></l>
+        </ul>
+    </nav>
+    
+    
+    <!-- div creado para poder ocultarlo tras procesar la primera pantalla -->
+    <div class="" id="pantalla-inicio">
+        <h1 class="titulo">BIENVENIDO A: ENCUENTRA-LOS</h1>
+        <p class="cabezaFoto" id="cabezaFoto"><strong>ELIGE LA COLECCIÓN</strong></p>
+
+        <!-- Muestra la imagen de las colecciones disponibles -->
+        <section class="colecciones" id="colecciones">
+                
+            <button id="coleccion1" class="coleccion1">
+                <img  src="Assets/images/animales.jpg" width="180px" height="220px"  alt="imagen coleccion 1">
+            </button>
+                        
+            <button id="coleccion2" class="coleccion2">
+                <img src="Assets/images/edificios.jpg" width="180px" height="220px"  alt="imagen coleccion 1">
+            </button>
+                        
+            <button id="coleccion3" class="coleccion3">
+                <img src="Assets/images/arboles.jpg" width="180px" height="220px" alt="imagen coleccion 1">
+            </button>
+        
+        </section>
+
+        <p class="pieFoto" id="pieFoto">
+            <span>1. Animales</span>
+            <span>2. Monumentos</span>
+            <span>3. Árboles</span>
+        </p>
+
+        <br>
+
+        <!-- Formulario para elegir colección y número de intentos -->
+        <form class="elecciones" id="elecciones">
+            <p>Colección:
+                <input class="coleccionElegida" id="coleccionElegida" type="number" name="colElegida" min="1" max="3" placeholder="(1-3)" required>
+            </p>
+
+            <label> Elegir número de intentos (de 10 a 50): </label>
+            <input class="intentos" id="intentos" type="number" name="intentos"  min="10" max="50" value="25">
+                    
+            <p><input type="submit" value="Aceptar" ></p>
+
+        </form>
+    </div>
+
+    <!-- ** SEGUNDA PANTALLA, la del juego ** -->
+    <div class="ocultar" id="Encuentra-los">
+        <h1 class="titulo" id="titulo">ENCUENTRA-LOS </h1>
+
+            <aside class="lateral" id="lateral">
+                <p class="cab-puntuacion" id="cab-puntuacion">Puntuación: <span class="puntuacion" id="puntuacion"> </span></p>
+                
+                <p class="cab-intentos" id="cab-intentos">Intentos restantes: <span class="intentosRestantes" id="intentosRestantes"> </span></p>
+                <br>
+                <form class="coordenadas" id="coordenadas">
+                    <label>Introduce coordenadas</label>
+                    <br>
+                    <label>X:</label>
+                    <input class="coordenadaX" id="coordenadaX" type="number" name="coordenadaX"  min="1" max="11" autofocus required>
+                    <label>Y:</label>
+                    <input class="coordenadaY" id="coordenadaY" type="number" name="coordenadaY"  min="1" max="10" required>
+                    <input class="enviarCoord" type="submit" value="Enviar">
+                    <br>
+                    <span class="observaciones" id="observaciones">(X= columna / Y = fila)</span>
+                    <br>
+                    <span class="ocultar" id="elegido"> YA ELEGIDO, PRUEBE DE NUEVO</span>
+                </form>
+
+                <!-- ** TERCERA PANTALLA del juego - Resultado final ** -->
+                <div class="ocultar" id="final">
+                    <div class="continuar" id="continuar">
+                        <div class="fin animate_animated animate__swing" id="fin"></div>
+                        <div>¿Desea volver a jugar?</div>
+                        <button class="Si" id="Si">Sí</button>
+                        <button class="No" id="No">No</button>
+
+                    </div>
+                </div>
+                <!-- ---- FIN TERCERA PANTALLA -->
+
+                <p class="cab-encontrados" id="cab-encontrados">Encontrados: <span class="encontrados" id="encontrados"> </span></p>
+
+                <section class="imagenes" id="imagenes">
+                    <p><img class="imagen0" id="imagen0"></img>
+                    <img class="imagen1" id="imagen1"></img></p>
+                    <p><img class="imagen2" id="imagen2"></img>
+                    <img class="imagen3" id="imagen3"></img></p>
+                    <p><img class="imagen4" id="imagen4"></img></p>
+                
+                </section>
+
+            </aside>
+        
+            <!-- Espacio para el grid que será creado con js -->
+        <div class="grid-container" id="grid-container"> </div>
+    </div>
+
+    <img class="imagenEncontrada" id="imagenEncontrada">
+        
+    </img>
+
+    <section class="finPartida" id="finPartida">
+        <div class="popup">
+            <span class="close">&times;</span>
+            <p class="resultado" id="resultado"></p>
+            <img class="imgResultado" id="imgResultado">
+        </div>
+    </section>
+
+
+
+
+    <!-- Pantalla final gracias -->
+    <section class="ocultar" id="gracias">
+        <h1 class="tituloGracias">
+            ¡GRACIAS POR JUGAR A <br>
+            ENCUENTRA-LOS! <br>
+            VUELVE PRONTO</h1>
+        <img class="imgAdios" src="Assets/images/adios globo.png">
+    </section>
+
+<br><br>
+</body>
+
+<script src="script.js"></script>
+<!-- <script src="scriptPRUEBA.js"></script> -->
+
+</html>
