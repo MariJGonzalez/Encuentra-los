@@ -23,3 +23,14 @@ Al no acertar sonará un sonido de fallo y se coloreará de color naranja.
 Al terminar el número de intentos o encontrar todas las figuras se termina el
 juego y te saldrá la puntuación.
 Te pedirá si deseas volver a jugar
+
+. Cómo ejecutar el juego desde un servidor
+El juego está contenido en una carpeta llamada: “Encuentra-los”
+Dentro de ella están los archivos
+- “Index.html”, “style.css” y “script.js” con el código.
+- Archivos “Manual de usuario”, “Objetivos del juego”, a los que enlaza el menú.
+- Carpeta “Assets”, que contiene las imágenes y sonidos utilizados.
+Para poder ejecutarlo:
+- Subir la carpeta “Encuentra-los” completa (incluyendo la subcarpeta “Assets”
+con todo su contenido) a un dominio o subdominio.
+- Cambiar la ruta del menú “Comenzar” del archivo “Inicio.html”
